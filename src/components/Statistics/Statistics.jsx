@@ -1,0 +1,28 @@
+import { WrapperStaistic } from './Statistics.styled';
+import PropTypes from 'prop-types';
+
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
+  return (
+    <WrapperStaistic>
+      <p>Good:{good}</p>
+      <p>Neutral:{neutral}</p>
+      <p>Bad:{bad}</p>
+      <p>Total:{total}</p>
+      <p>Positeve fidbak:{positivePercentage}</p>
+    </WrapperStaistic>
+  );
+}
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+};
